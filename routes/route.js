@@ -2,7 +2,6 @@ const express = require('express')
 const { userSignup, userLogin } = require('../controller/user-controller.js')
 const { getProducts } = require('../controller/product-controller.js')
 const { AddToCart, DeleteFromCart , UpdateQuantity } = require('../controller/Cart-controller.js')
-const addPaymentGateWay = require('../controller/payment-controller.js').addPaymentGateway
 
 
 
@@ -14,7 +13,7 @@ router.post('/login', userLogin)
 
 router.get('/products', getProducts)
 
-router.post('/payment', addPaymentGateWay)
+
 
 router.post('/addtocart', AddToCart)
 
