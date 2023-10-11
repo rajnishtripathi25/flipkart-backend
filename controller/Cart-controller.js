@@ -10,9 +10,9 @@ const AddToCart = async (req, res) => {
         const isProductExist = await CartModel.find({ $and: [{ userId: product.userId }, { id: product.id }] })
         if (isProductExist.length === 0) {
 
-            const item = new CartModel({ userId: email, ...product })
+            const item = new CartModel(product)
             let result = await item.save()
-            await AmountModel.updateOne({ email: email }, {
+            const respose = await AmountModel.updateOne({ email: email }, {
                 $set: {
                     amount: (amount + product.price.cost),
                     cart: (cart + 1)
@@ -69,4 +69,4 @@ const UpdateQuantity = async (req, res) => {
 
 
 
-module.exports = { AddToCart, DeleteFromCart , UpdateQuantity}
+module.exports = { AddToCart, DeleteFromCart, UpdateQuantity }
