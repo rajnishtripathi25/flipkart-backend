@@ -1,7 +1,7 @@
 const express = require('express')
 const { userSignup, userLogin } = require('../controller/user-controller.js')
 const { getProducts } = require('../controller/product-controller.js')
-const { AddToCart, DeleteFromCart , UpdateQuantity } = require('../controller/Cart-controller.js')
+const { AddToCart, DeleteFromCart , IncreaseQuantity , DecreaseQuantity } = require('../controller/Cart-controller.js')
 
 
 
@@ -19,7 +19,8 @@ router.post('/addtocart', AddToCart)
 
 router.post('/delete-from-cart', DeleteFromCart)
 
-router.put('/update-quantity', UpdateQuantity)
+router.put('/decrease-quantity', DecreaseQuantity)
+router.put('/increase-quantity', IncreaseQuantity)
 
 // router.post('/create-checkout-session', addPaymentGateWay)
 

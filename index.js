@@ -5,7 +5,7 @@ const DefaultData = require('./default.js')
 const router = require('./routes/route.js')
 
 
-const Port = process.env.port || 5001
+const Port = process.env.port || 5000
 const app = express()
 
 app.use(express.json())
