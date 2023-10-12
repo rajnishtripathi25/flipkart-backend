@@ -101,6 +101,26 @@ const IncreaseQuantity = async (req, res) => {
     }
 }
 
+const checkout = async (req, res) => {
+    try {
 
+        const result = await CartModel.deleteMany({ userId: req.body.userId })
+        try {
+            await AmountModel.updateOne({ email: req.body.email }, {
+                $set: {
+                    cart: 0,
+                    amount: 0
+                }
+            })
+        }
+        catch (err) {
+            res.send(err)
+        }
+        res.send(result)
+    } catch (err) {
+        res.status(400).send(err)
+    }
 
-module.exports = { AddToCart, DeleteFromCart, DecreaseQuantity, IncreaseQuantity }
+}
+
+module.exports = { AddToCart, DeleteFromCart, DecreaseQuantity, IncreaseQuantity, checkout }
