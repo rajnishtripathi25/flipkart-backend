@@ -20,8 +20,8 @@ const userSignup = async (req, res) => {
             delete result.confirm_password
             const newuserAmount = new AmountModel({ email: req.body.email, amount: 0, cart: 0 })
             let updateAmount = await newuserAmount.save()
-            result['amount'] = response.amount
-            result['cart'] = response.cart
+            result['amount'] = 0
+            result['cart'] = 0
             res.send(result)
         }
     }
