@@ -14,7 +14,7 @@ app.use(cors())
 app.use(router)
 
 // call it for insert the data
-//DefaultData();
+// DefaultData();
 
 
 app.listen(Port, () => console.log(`Server is running on port ${Port}`))
