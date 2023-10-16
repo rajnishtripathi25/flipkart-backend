@@ -34,7 +34,7 @@ router.post('/product/braintree/payment', paymentController)
 
 router.post('/checkout', checkout)
 
-router.post('/send-mail', SendMail);
+
 
 
 
