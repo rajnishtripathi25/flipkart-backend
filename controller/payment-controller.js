@@ -1,6 +1,7 @@
 require('dotenv').config()
 const OrderModel = require("../model/OrderModel")
 var braintree = require("braintree");
+const SendMail = require('./Email-controller');
 
 const date = new Date(Date.now()).toLocaleString()
 
@@ -31,9 +32,9 @@ const braintreeTokenController = async (req, res) => {
 
 //payment 
 const paymentController = async (req, res) => {
-
+  
   try {
-
+    
     const { nonce, amount, userId, cartProducts, address } = req.body
     let newTransaction = gateway.transaction.sale(
       {
@@ -48,7 +49,7 @@ const paymentController = async (req, res) => {
           console.error(err);
           return;
         }
-
+        
         if (result.success) {
           const order = new OrderModel({
             products: cartProducts,
@@ -58,9 +59,15 @@ const paymentController = async (req, res) => {
             deliveryAddress: address
           })
           order.save()
-            .then((savedOrder) => {
-              res.send(savedOrder)
-            })
+          .then((savedOrder) => {
+            res.send(savedOrder)
+          })
+          try {
+            
+            const response = SendMail(req.body)
+          } catch (err) {
+            res.status(400).send(err)
+          }
 
         } else {
           console.error(result.message);

@@ -23,10 +23,10 @@ const AddToCart = async (req, res) => {
             details.amount += product.price.cost
             const cartItems = await CartModel.find({ userId: product.userId })
 
-            res.send({ ...result, cart: details, cartItems: cartItems })
+            res.status(200).send({ ...result, cart: details, cartItems: cartItems })
         }
         else {
-            res.send({ isExist: true })
+            res.status(200).send({ isExist: true })
         }
     } catch (err) {
         res.status(400).send(err)

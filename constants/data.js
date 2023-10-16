@@ -14,9 +14,13 @@ const products = [
             discount: '47%'
         },
         quantity: 1,
-        description: 'This electric kettle from Pigeon will soon become a travelers best friend, a hostelite saviour and an answer to all the midnight cravings. With this handy appliance, you can boil water and use it to make instant noodles, packet soup, coffee and green tea.',
+        description: 'This electric kettle from Pigeon will soon become a traveler\'s best friend, a hostelite savior, and an answer to all the midnight cravings. With this handy appliance, you can boil water and use it to make instant noodles, packet soup, coffee, and green tea.',
         discount: 'Extra 10% Off',
-        tagline: 'Deal of the day'
+        tagline: 'Deal of the day',
+        ratings: {
+            rating: 4.3,
+            totalNumbers: 82
+        }
     },
     {
         id: 'product2',
@@ -32,9 +36,13 @@ const products = [
             discount: '40%'
         },
         quantity: 1,
-        description: 'This non-stick sandwich toaster .easy to use and very handy. Directly hold over flame to make tasty toasts and toasted sandwiches. Specially designed by keeping your needs in mind, the sandwich maker makes whatever youre doing simpler, smarter and better',
+        description: 'This non-stick sandwich toaster is easy to use and very handy. Directly hold over the flame to make tasty toasts and toasted sandwiches. Specially designed by keeping your needs in mind, the sandwich maker makes whatever you\'re doing simpler, smarter, and better.',
         discount: 'From 99+5% Off',
-        tagline: 'Pestige, Nova & more'
+        tagline: 'Prestige, Nova & more',
+        ratings: {
+            rating: 3.5,
+            totalNumbers: 70
+        }
     },
     {
         id: 'product3',
@@ -50,9 +58,13 @@ const products = [
             discount: '66%'
         },
         quantity: 1,
-        description: 'This unique product can tone your back muscles, reduce belly fat, improve blood circulation and also improves your body posture. It increases the stamina, energy and vitality of the body. The elastic resistance of the rubber training rope can be used to train and exercise in whichever way you want, according to your physical needs.',
+        description: 'This unique product can tone your back muscles, reduce belly fat, improve blood circulation, and also improve your body posture. It increases the stamina, energy, and vitality of the body. The elastic resistance of the rubber training rope can be used to train and exercise in whichever way you want, according to your physical needs.',
         discount: 'Upto 70% Off',
-        tagline: 'Deal of the Day'
+        tagline: 'Deal of the Day',
+        ratings: {
+            rating: 4.3,
+            totalNumbers: 95
+        }
     },
     {
         id: 'product4',
@@ -68,9 +80,13 @@ const products = [
             discount: '42%'
         },
         quantity: 1,
-        description: 'The Molife Sense 500, a brilliant smartwatch with a beautiful large display. Say hello to the infinity 1.7-inch display with 2.5D curved edges. Thanks to seamless Bluetooth 5.0 connectivity, you wont have to keep waiting. Bring a change to your outfit every day with changeable straps. A splash of color every day keeps the boredom away.',
+        description: 'The Molife Sense 500, a brilliant smartwatch with a beautiful large display. Say hello to the infinity 1.7-inch display with 2.5D curved edges. Thanks to seamless Bluetooth 5.0 connectivity, you won\'t have to keep waiting. Bring a change to your outfit every day with changeable straps. A splash of color every day keeps the boredom away.',
         discount: 'Grab Now',
-        tagline: 'Best Seller'
+        tagline: 'Best Seller',
+        ratings: {
+            rating: 4.3,
+            totalNumbers: 75
+        }
     },
     {
         id: 'product5',
@@ -82,13 +98,17 @@ const products = [
         },
         price: {
             mrp: 1899,
-            cost: 1124,
-            discount: '40%'
+            cost: 399,
+            discount: '78%'
         },
         quantity: 1,
-        description: '',
-        discount: 'From ₹499',
-        tagline: 'Kubra, Nova & more'
+        description: 'Introducing the professional hair dryer that lets you have that expert like hair at the comfort of your home. With 180\'C ionic technology, it will give you the best results as compared to any common hair dryer available. 2.8 in 1 hair dryer comes with a concentration nozzle. It will make sure your hair gets the desired look you want to achieve.',
+        discount: 'Up to 80% Off',
+        tagline: 'Special Offer',
+        ratings: {
+            rating: 3.5,
+            totalNumbers: 58
+        }
     },
     {
         id: 'product6',
@@ -106,7 +126,11 @@ const products = [
         quantity: 1,
         description: 'Table Fan. Perfect size fan for use on a table, desk or in an RV. Whisper quiet, powerful airflow and reliable operation in a compact 6" size. Two adjustable speeds to customize airflow: high or low settings. Tough break-resistant ABS plastic blades. ',
         discount: 'Minimum 40% Off',
-        tagline: 'Top Selling'
+        tagline: 'Top Selling',
+        ratings: {
+            rating: 4.2,
+            totalNumbers: 120
+        }
     },
     {
         id: 'product7',
@@ -124,9 +148,12 @@ const products = [
         quantity: 1,
         description: 'Let music brighten up your mood anytime, anywhere with the boAt 235v2 Fast Charging Bluetooth Headset. This Bluetooth headset features a Call Vibration Alert, a Fast Charging Technology, and Easy Access Controls to listen to and manage your favorite music with ease.',
         discount: 'Minimum 50% Off',
-        tagline: 'Grab Now!'
+        tagline: 'Grab Now!',
+        ratings: {
+            rating: 4.5,
+            totalNumbers: 90
+        }
     },
-
     {
         "id": "product8",
         "category": "Electronics",
@@ -144,7 +171,11 @@ const products = [
         "quantity": 1,
         "description": "Experience unmatched performance with the Dell XPS 13 laptop. It features an ultra-thin design, a vibrant 13-inch InfinityEdge display, an Intel Core i7 processor, and long-lasting battery life.",
         "discount": "Limited Time Offer",
-        "tagline": "Power Meets Portability!"
+        "tagline": "Power Meets Portability!",
+        ratings: {
+            rating: 4.7,
+            totalNumbers: 150
+        }
     },
     {
         "id": "product9",
@@ -163,7 +194,11 @@ const products = [
         "quantity": 1,
         "description": "Stay connected and active with the Apple Watch Series 7. This GPS + Cellular smartwatch features a larger Always-On Retina display, health monitoring capabilities, and seamless integration with your Apple devices.",
         "discount": "Hurry, Limited Stock!",
-        "tagline": "Your Health, Your Way!"
+        "tagline": "Your Health, Your Way!",
+        ratings: {
+            rating: 4.9,
+            totalNumbers: 200
+        }
     },
     {
         "id": "product10",
@@ -182,7 +217,11 @@ const products = [
         "quantity": 1,
         "description": "Capture stunning photos and 4K video with the Sony Alpha a6400 mirrorless camera. It features a 24.2MP sensor, Real-time Eye Autofocus, and fast continuous shooting capabilities for photography enthusiasts.",
         "discount": "Save Big Today!",
-        "tagline": "Unleash Your Creativity!"
+        "tagline": "Unleash Your Creativity!",
+        ratings: {
+            rating: 4.8,
+            totalNumbers: 180
+        }
     },
     {
         "id": "product11",
@@ -201,7 +240,11 @@ const products = [
         "quantity": 1,
         "description": "Experience the power and elegance of the APPLE 2022 MacBook Air. Featuring the blazing-fast M2 processor, 8 GB of unified memory, and a 256 GB SSD, it runs on the sleek Mac OS Monterey. With a 13.6-inch display and a wide range of built-in apps, this MacBook Air offers unmatched performance and versatility.",
         "discount": "Save on the Latest Apple Tech!",
-        "tagline": "Unleash Your Creativity!"
+        "tagline": "Unleash Your Creativity!",
+        "ratings": {
+            rating: 4.7,
+            totalNumbers: 180
+        }
     },
     {
         "id": "product12",
@@ -221,8 +264,10 @@ const products = [
         "description": "Step out in style and comfort with these Men's Olive Clogs Sandals. These sandals are designed to provide both fashion and comfort, making them perfect for casual outings. With a 69% discount, you can enjoy both style and savings.",
         "discount": "Huge Savings on Stylish Footwear!",
         "tagline": "Walk in Style!",
-        "ratings": "4.29 (47 ratings)",
-        "reviews": 75
+        "ratings": {
+            rating: 4.29,
+            totalNumbers: 47
+        }
     },
     {
         "id": "product13",
@@ -242,8 +287,10 @@ const products = [
         "description": "Protect your Poco M2 or Mi Redmi 9 Prime with this Micvir Back Cover. This cover is transparent with black accents and includes a camera bump protector. With an 80% discount, it's an affordable and stylish way to keep your phone safe from scratches and impacts.",
         "discount": "Massive Discount on Phone Protection!",
         "tagline": "Keep Your Phone Safe in Style!",
-        "ratings": "4.3 (806 ratings)",
-        "reviews": 141
+        "ratings": {
+            rating: 4.3,
+            totalNumbers: 806
+        }
     },
     {
         "id": "product14",
@@ -263,8 +310,10 @@ const products = [
         "description": "Upgrade your kitchen with the SAMSUNG 183 L Direct Cool Single Door Refrigerator in Camellia Blue. It features a 4-star energy rating and a base drawer for extra storage. The Digital Inverter ensures energy efficiency, and with an extra ₹500 off, it's a fantastic deal.",
         "discount": "Get ₹500 Extra Discount!",
         "tagline": "Upgrade Your Kitchen in Style!",
-        "ratings": "4.4 (116 ratings)",
-        "reviews": 2476
+        "ratings": {
+            rating: 4.4,
+            totalNumbers: 116
+        }
     },
     {
         "id": "product15",
@@ -284,7 +333,10 @@ const products = [
         "description": "Upgrade your kitchen with the SAMSUNG 236 L Frost Free Double Door Refrigerator in Camellia Purple. This convertible refrigerator offers energy efficiency with a 2-star rating. The Digital Inverter and Display add convenience to your daily life, and you can save ₹5410 on this fantastic deal.",
         "discount": "Get ₹5410 Extra Discount!",
         "tagline": "Upgrade Your Kitchen in Style!",
-        "ratings": "4.4 (762 ratings)",
+        "ratings": {
+            rating: 4.4,
+            totalNumbers: 116
+        },
         "reviews": 2151
     },
     {
@@ -305,8 +357,10 @@ const products = [
         "description": "Upgrade your kitchen with the Haier 240 L Frost Free Double Door Refrigerator in Moon Silver. This refrigerator offers energy efficiency with a 2-star rating. Save ₹500 on this amazing deal and keep your food fresh and cool in style.",
         "discount": "Get ₹500 Extra Discount!",
         "tagline": "Upgrade Your Kitchen in Style!",
-        "ratings": "4.4 (6,726 ratings)",
-        "reviews": 634
+        "ratings": {
+            rating: 4.4,
+            totalNumbers: 6726
+        }
     },
     {
         "id": "product17",
@@ -326,8 +380,10 @@ const products = [
         "description": "Stay comfortable and stylish with this solid black polo neck T-shirt made of pure cotton. It's available at a special price with a 48% discount. With high ratings and reviews, it's a must-have for your wardrobe.",
         "discount": "Get 48% Discount on Style!",
         "tagline": "Stay Stylish and Comfortable!",
-        "ratings": "4.2 (1,18,786 ratings)",
-        "reviews": 9359
+        "ratings": {
+            rating: 4.2,
+            totalNumbers: 118786
+        }
     },
     {
         "id": "product18",
@@ -347,10 +403,12 @@ const products = [
         "description": "Stay updated with the latest in English magazines from ReviewAdda. Get insightful articles and reviews on various topics. With a 10% discount, this is an excellent offer to enhance your reading experience.",
         "discount": "Get 10% Discount on Magazines!",
         "tagline": "Expand Your Knowledge with ReviewAdda!",
-        "ratings": "4.5 (51 ratings)",
-        "reviews": 1
-    }
-    , {
+        "ratings": {
+            rating: 4.5,
+            totalNumbers: 51
+        }
+    },
+    {
         "id": "product19",
         "category": "Home & Kitchen",
         "url": "https://rukminim2.flixcart.com/image/612/612/xif0q/mug/o/j/6/aao-behen-chugli-kare-a-gift-for-best-friend-sister-wife-original-imagszersq8yjh5n.jpeg?q=70",
@@ -368,9 +426,12 @@ const products = [
         "description": "Enjoy your coffee or tea in style with this ceramic coffee mug. It features a unique design and a special message for your best friend, sister, wife, or girlfriend. At a 65% discount, it's a perfect gift to show your love and affection.",
         "discount": "Get 65% Discount on This Special Gift!",
         "tagline": "Express Your Love with a Special Mug!",
-        "ratings": "4.6 (25 ratings)",
-        "reviews": 0
-    }, {
+        "ratings": {
+            rating: 4.6,
+            totalNumbers: 25
+        }
+    },
+    {
         "id": "product20",
         "category": "Home & Kitchen",
         "url": "https://rukminim2.flixcart.com/image/612/612/xif0q/mug/x/c/9/double-wall-vacuum-insulated-stainless-steel-tea-coffee-mug-original-imaggb4ffkv6dafq.jpeg?q=70",
@@ -388,7 +449,10 @@ const products = [
         "description": "Keep your beverages hot or cold with the Nirvaana Double Wall Vacuum Insulated Stainless Steel Thermos Flask Mug. It's perfect for both travel and daily use. With a 76% discount, it's an excellent deal to ensure your drinks stay at the right temperature.",
         "discount": "Get 76% Discount on This Thermos Flask!",
         "tagline": "Keep Your Beverages Perfectly Tempered!",
-        "ratings": "3.9 (293 ratings)",
+        "ratings": {
+            rating: 4.6,
+            totalNumbers: 25
+        },
         "reviews": 297
     }
 
