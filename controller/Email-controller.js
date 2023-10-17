@@ -67,7 +67,7 @@ const sendMail = async (req) => {
             <p>Shipping Address:</p>
             <p>${req.address}</p>
     
-            <p>Payment Method: card</p>
+            <p>Payment Method: Cash on Delivery </p>
     
             <p>Your order is now being processed, and you will receive a notification once it has been shipped. If you have any questions or need further assistance, please feel free to contact our customer support team at [Customer Support Email].</p>
     

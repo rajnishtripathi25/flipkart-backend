@@ -32,50 +32,51 @@ const braintreeTokenController = async (req, res) => {
 
 //payment 
 const paymentController = async (req, res) => {
-  
+
   try {
-    
-    const { nonce, amount, userId, cartProducts, address } = req.body
-    let newTransaction = gateway.transaction.sale(
-      {
-        amount: amount,
-        paymentMethodNonce: nonce,
-        options: {
-          submitForSettlement: true,
-        },
-      },
-      function (err, result) {
-        if (err) {
-          console.error(err);
-          return;
-        }
-        
-        if (result.success) {
-          const order = new OrderModel({
-            products: cartProducts,
-            payment: result,
-            buyer: userId,
-            date: date,
-            deliveryAddress: address
-          })
-          order.save()
-          .then((savedOrder) => {
-            res.send(savedOrder)
-          })
-          try {
-            
-            const response = SendMail(req.body)
-          } catch (err) {
-            res.status(400).send(err)
-          }
 
-        } else {
-          console.error(result.message);
-        }
+    const { nonce, amount, cartProducts, address ,email ,name} = req.body
+    // let newTransaction = gateway.transaction.sale(
+    //   {
+    //     amount: amount,
+    //     paymentMethodNonce: nonce,
+    //     options: {
+    //       submitForSettlement: true,
+    //     },
+    //   },
+    //   function (err, result) {
+    //     if (err) {
+    //       console.error(err);
+    //       return;
+    //     }
+
+    // if (result.success)
+    if (true) {
+      const order = new OrderModel({
+        products: cartProducts,
+        payment: amount,
+        buyer: email,
+        date: date,
+        deliveryAddress: address
+      })
+      order.save()
+        .then((savedOrder) => {
+          res.send(savedOrder)
+        })
+      try {
+
+        const response = SendMail(req.body)
+      } catch (err) {
+        res.status(400).send(err)
       }
-    );
 
-  } catch (err) {
+    } else {
+      console.error(result.message);
+    }
+  }
+  // );
+
+  catch (err) {
     console.log(err)
   }
 
