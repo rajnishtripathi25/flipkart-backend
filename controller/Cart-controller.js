@@ -123,4 +123,6 @@ const checkout = async (req, res) => {
 
 }
 
+
+
 module.exports = { AddToCart, DeleteFromCart, DecreaseQuantity, IncreaseQuantity, checkout }

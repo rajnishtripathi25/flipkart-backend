@@ -28,7 +28,7 @@ const userSignup = async (req, res) => {
         }
     }
     catch (err) {
-        res.status(400).send({message : err.message})
+        res.status(400).send({ message: err.message })
     }
 }
 const userLogin = async (req, res) => {
@@ -67,4 +67,21 @@ const userLogin = async (req, res) => {
     }
 }
 
-module.exports = { userSignup, userLogin }
+const userCartData = async (req, res) => {
+    try {
+        let result = {}
+        const response = await AmountModel.findOne({ email: req.body.email })
+        const products = await CartModel.find({ userId: req.body._id })
+        result['amount'] = response.amount
+        result['cart'] = response.cart
+        result['cartProducts'] = products
+        res.send(result)
+    }
+    catch (err) {
+        res.status(400).send(err)
+
+    }
+}
+
+
+module.exports = { userSignup, userLogin, userCartData }

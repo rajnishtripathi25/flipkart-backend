@@ -1,6 +1,6 @@
 require('dotenv').config()
 const express = require('express')
-const { userSignup, userLogin } = require('../controller/user-controller.js')
+const { userSignup, userLogin, userCartData } = require('../controller/user-controller.js')
 const { getProducts } = require('../controller/product-controller.js')
 const { AddToCart, DeleteFromCart, IncreaseQuantity, DecreaseQuantity, checkout } = require('../controller/Cart-controller.js')
 const { braintreeTokenController, paymentController } = require('../controller/payment-controller.js')
@@ -13,6 +13,8 @@ const router = express.Router()
 router.post('/signup', userSignup)
 
 router.post('/login', userLogin)
+
+router.post('/get-cart-data', userCartData)
 
 router.get('/products', getProducts)
 
