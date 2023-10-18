@@ -2,7 +2,7 @@ const nodemailer = require('nodemailer');
 
 const sendMail = async (req) => {
 
-    const items = req.cartProducts;
+    const items = req.Product;
     let Quantity = 0;
     let Total = 0;
 

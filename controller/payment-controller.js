@@ -35,7 +35,7 @@ const paymentController = async (req, res) => {
 
   try {
 
-    const { nonce, amount, cartProducts, address ,email ,name} = req.body
+    const { nonce, amount, Product, address, email, name } = req.body
     // let newTransaction = gateway.transaction.sale(
     //   {
     //     amount: amount,
@@ -53,22 +53,23 @@ const paymentController = async (req, res) => {
     // if (result.success)
     if (true) {
       const order = new OrderModel({
-        products: cartProducts,
+        products: Product,
         payment: amount,
         buyer: email,
         date: date,
         deliveryAddress: address
       })
-      order.save()
-        .then((savedOrder) => {
-          res.send(savedOrder)
-        })
       try {
-
+        console.log('email')
         const response = SendMail(req.body)
       } catch (err) {
         res.status(400).send(err)
       }
+      order.save()
+        .then((savedOrder) => {
+          res.send(savedOrder)
+        })
+
 
     } else {
       console.error(result.message);
